@@ -1,3 +1,79 @@
-.container {
-    padding: 20px 0;
+@import url('https://fonts.googleapis.com/css?family=Rock+Salt');
+body {
+
+}
+
+.wrapper {
+    border: 5px solid black;
+    height: 100vh;
+    width: 100vw;
+    font-family: 'Rock Salt', cursive;
+    background-color: #F4E9D7;
+}
+
+.main h3 {
+    font-size: 30px;
+}
+
+.text-center {
+    line-height: 60px;
+    padding-top: 15px;
+}
+
+.photo img {
+    margin: 0 auto;
+    position: absolute;
+    left: 500px;
+    top: 370px;
+}
+
+.table {
+    font-size: 18px;
+}
+
+.newGame button {
+    font-size: 18px;
+    height: 50px;
+}
+
+.main .btnScissors {
+    background-color: #EDC5BB;
+}
+
+.main .btnRock {
+    background-color: #C7C3BA;
+}
+.main .btnPaper {
+    background-color: #C1DFDE;
+}
+
+.playerPick .btnRock i {
+    font-size: 20px;
+}
+.playerPick .btnPaper i {
+    font-size: 20px;
+}
+
+.playerPick .btnScissors i {
+    font-size: 20px;
+}
+
+.main btn-default {
+    font-size: 40px;
+}
+
+.playerPick .btnScissors {
+    background-color: #EDC5BB;
+}
+
+.playerPick .btnRock {
+    background-color: #C7C3BA;
+    height: 40px;  
+}
+.playerPick .btnPaper {
+    background-color: #C1DFDE;
+}
+
+.playerPick .badge {
+    background-color: transperent;
 }

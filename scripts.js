@@ -50,7 +50,7 @@ function setGameElements() {
     }
 }
     
-setGameElements();                                                            //wywołanie funkcji
+    setGameElements();                                                            //wywołanie funkcji
 
 var playerPointsElem = document.getElementById('js-playerPoints'),            //Rozpoczęcie gry
     playerNameElem = document.getElementById('js-playerName'),
@@ -67,10 +67,6 @@ function newGame() {                                                            
         setGamePoints();
     }
 
-}
-
-function playerPick(playerPick) {                                               //pobranie wyboru gracza
-    console.log(playerPick);
 }
 
 function getComputerPick() {                                                    //losowanie wyboru gracza
@@ -98,7 +94,7 @@ function checkRoundWinner(playerPick, computerPick) {                           
     var winnerIs = 'player';
 
     if (playerPick == computerPick) {
-        winnerIs = 'none'; // remis
+        winnerIs = 'none';
         playerResultElem.innerHTML = "Tie!";
         computerResultElem.innerHTML = "Tie!";
     } else if (
@@ -117,8 +113,8 @@ function checkRoundWinner(playerPick, computerPick) {                           
         computer.score++;
     }
 
-setGamePoints();                                                            //wywołanie funkcji
-gameEnd();
+    setGamePoints();                                                            //wywołanie funkcji podliczenie punktów 
+    gameEnded();
 
 };
 
@@ -127,15 +123,15 @@ function setGamePoints() {                                                      
     computerPointsElem.innerHTML = computer.score;
 }
 
-function gameEnd() {                                                    //sprawdzanie kto zdobył 10pkt
+function gameEnded() {                                                    //sprawdzanie kto zdobył 10pkt
     if (player.score == 10) {
         alert(player.name + ' wins' + ' :D')
-        gameState = 'end'
+        gameState = 'ended'
     } else if (computer.score == 10) {
         alert('computer' + ' wins' + ' ;(')
-        gameState = 'end'
+        gameState = 'ended'
     }
 
-setGameElements();
+    setGameElements();                                                           //wywołanie funkcji zaczynającej grę od nowa! 
     
 };
