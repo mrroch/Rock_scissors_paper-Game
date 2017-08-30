@@ -56,8 +56,28 @@ var playerPointsElem = document.getElementById('js-playerPoints'),            //
     playerNameElem = document.getElementById('js-playerName'),
     computerPointsElem = document.getElementById('js-computerPoints');
 
-function newGame() {                                                            //wpisanie imienia gracza
-    player.name = prompt('Please enter your name', "player's name");
+function newGame() {
+
+swal({
+    title: "Who are you?",
+    text: "Please enter your name:",
+    type: "input",
+    showCancelButton: true,
+    closeOnConfirm: false,
+    animation: "slide-from-top",
+    inputPlaceholder: "player's name"
+  },
+  function(inputValue){
+    if (inputValue === false) return false;
+
+    if (inputValue === "") {
+      swal.showInputError("You need to write your name!");
+      return false;
+    }
+    swal("Let's start!", "Good luck! " + inputValue);
+    player.name = inputValue;
+    
+    
     if (player.name) {
         player.score = computer.score = 0;
         gameState = 'started';
@@ -67,6 +87,8 @@ function newGame() {                                                            
         setGamePoints();
     }
 
+});
+    
 }
 
 function getComputerPick() {                                                    //losowanie wyboru gracza
@@ -125,10 +147,13 @@ function setGamePoints() {                                                      
 
 function gameEnded() {                                                    //sprawdzanie kto zdobył 10pkt
     if (player.score == 10) {
-        alert(player.name + ' wins' + ' :D')
+        swal("Awesome!", player.name + ' wins' + ' :D')
         gameState = 'ended'
     } else if (computer.score == 10) {
-        alert('computer' + ' wins' + ' ;(')
+        sweetAlert({
+            title: "Darn it!",
+            text: "Computer is the winner",
+        })
         gameState = 'ended'
     }
 
