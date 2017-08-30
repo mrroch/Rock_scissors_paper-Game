@@ -38,7 +38,7 @@ body {}
     height: 50px;
     line-height: 0px;
     font-weight: 700;
-    transition: 2s;
+    transition: 1s;
     padding: 20px;
 }
 
@@ -48,7 +48,7 @@ body {}
     border-color: #C7C3BA;
     animation-name: shake;
     animation-duration: 1s;
-    animation-delay: 0.8s;
+    animation-delay: 0.5s;
     animation-iteration-count: infinite;
 }
 
@@ -80,7 +80,7 @@ body {}
     border: 2px solid #747472;
     margin: 5px;
     padding: 10px 20px;
-    transition: 1.5s;
+    transition: 0.8s;
 }
 
 .playerPick .btnRock:hover {
@@ -92,7 +92,7 @@ body {}
     border: 2px solid #747472;
     margin: 5px;
     padding: 10px 20px;
-    transition: 1.5s;
+    transition: 0.8s;
 }
 
 .playerPick .btnPaper:hover {
@@ -104,7 +104,7 @@ body {}
     border: 2px solid #747472;
     margin: 5px;
     padding: 10px 20px;
-    transition: 1.5s;
+    transition: 0.8s;
 }
 
 .playerPick .btnScissors:hover {
