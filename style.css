@@ -1,7 +1,5 @@
 @import url('https://fonts.googleapis.com/css?family=Overlock:400,700,900&subset=latin-ext');
-body {
-
-}
+body {}
 
 .wrapper {
     border: 4px solid #747472;
@@ -9,11 +7,13 @@ body {
     width: 100vw;
     font-family: 'Overlock', cursive;
     background-color: #F4E9D7;
+    position: relative;
 }
 
 .main h3 {
     font-size: 30px;
     font-weight: 700;
+    letter-spacing: 2px;
 }
 
 .text-center {
@@ -24,8 +24,8 @@ body {
 .photo img {
     margin: 0 auto;
     position: absolute;
-    left: 500px;
-    top: 370px;
+    left: 37.5%;
+    top: 60%;
 }
 
 .table {
@@ -34,15 +34,20 @@ body {
 
 .newGame button {
     border: 2px solid #EDC5BB;
-    font-size: 18px;
+    font-size: 1.3em;
     height: 50px;
     font-weight: 700;
+    transition: 2s;
 }
 
 .newGame button:hover {
     background-color: #EDC5BB;
     color: #fff;
     border-color: #C7C3BA;
+    animation-name: shake;
+    animation-duration: 1s;
+    animation-delay: 0.8s;
+    animation-iteration-count: infinite;
 }
 
 .main .btnScissors {
@@ -52,22 +57,27 @@ body {
 .main .btnRock {
     background-color: #C7C3BA;
 }
+
 .main .btnPaper {
     background-color: #C1DFDE;
 }
 
-.playerPick .btnRock span, .playerPick .btnPaper span, .playerPick .btnScissors span {
+.playerPick .btnRock span,
+.playerPick .btnPaper span,
+.playerPick .btnScissors span {
     font-size: 2em;
 }
 
 .btn-default {
     font-size: 40px;
 }
+
 .playerPick .btnRock {
     background-color: #C7C3BA;
-    border: 2px solid #747472; 
+    border: 2px solid #747472;
     margin: 5px;
     padding: 10px 20px;
+    transition: 1.5s;
 }
 
 .playerPick .btnRock:hover {
@@ -79,6 +89,7 @@ body {
     border: 2px solid #747472;
     margin: 5px;
     padding: 10px 20px;
+    transition: 1.5s;
 }
 
 .playerPick .btnPaper:hover {
@@ -90,6 +101,7 @@ body {
     border: 2px solid #747472;
     margin: 5px;
     padding: 10px 20px;
+    transition: 1.5s;
 }
 
 .playerPick .btnScissors:hover {
@@ -108,6 +120,28 @@ body {
     border-width: 3px;
 }
 
-.rock, .paper, .scissors {
+.rock,
+.paper,
+.scissors {
     color: #000;
+}
+
+@keyframes shake {
+    10%,
+    90% {
+        transform: translate3d(-1px, 0, 0);
+    }
+    20%,
+    80% {
+        transform: translate3d(2px, 0, 0);
+    }
+    30%,
+    50%,
+    70% {
+        transform: translate3d(-4px, 0, 0);
+    }
+    40%,
+    60% {
+        transform: translate3d(4px, 0, 0);
+    }
 }

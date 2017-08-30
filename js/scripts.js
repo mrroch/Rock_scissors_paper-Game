@@ -95,8 +95,8 @@ function checkRoundWinner(playerPick, computerPick) {                           
 
     if (playerPick == computerPick) {
         winnerIs = 'none';
-        playerResultElem.innerHTML = "Tie!";
-        computerResultElem.innerHTML = "Tie!";
+        playerResultElem.innerHTML = "<b>Tie!<b>";
+        computerResultElem.innerHTML = "<b>Tie!<b>";
     } else if (
         (computerPick == 'rock' && playerPick == 'scissors') ||
         (computerPick == 'scissors' && playerPick == 'paper') ||
@@ -106,10 +106,10 @@ function checkRoundWinner(playerPick, computerPick) {                           
     }
 
     if (winnerIs == 'player') {
-        playerResultElem.innerHTML = "Win!";
+        playerResultElem.innerHTML = "<b>Win!</b>";
         player.score++;
     } else if (winnerIs == 'computer') {
-        computerResultElem.innerHTML = "Win!";
+        computerResultElem.innerHTML = "<b>Win!</b>";
         computer.score++;
     }
 
