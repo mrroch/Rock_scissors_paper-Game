@@ -1,0 +1,174 @@
+@import url('https://fonts.googleapis.com/css?family=Overlock:400,700,900&subset=latin-ext');
+$rockColor: #C7C3BA;
+$rockHover: #9F9C94;
+$paperColor: #C1DFDE;
+$paperHover: #8ec5c3;
+$scissorsColor: #EDC5BB;
+$scissorsHover: #E8B4A7;
+$Border: #747472;
+$newGame: #EDC5BB;
+$background: #F4E9D7;
+.btnCommon {
+  border: 2px solid $Border;
+  margin: 5px;
+  padding: 1rem 2rem;
+  transition: 0.8s;
+}
+
+.span {
+  font-size: 1.8em;
+  color: $Border;
+}
+
+body {
+  font-size: 10px;
+}
+
+.wrapper {
+  border: 6px solid $Border;
+  height: 100vh;
+  width: 100vw;
+  font-family: 'Overlock', cursive;
+  background-color: $background;
+  position: relative;
+}
+
+.main h3 {
+  font-size: 3rem;
+  font-weight: 700;
+  letter-spacing: 0.2rem;
+}
+
+.text-center {
+  line-height: 60px;
+  padding-top: 15px;
+}
+
+.photo img {
+  margin: 0 auto;
+  position: absolute;
+  left: 37.5%;
+  top: 60%;
+}
+
+.table {
+  font-size: 1.3em;
+}
+
+.newGame button {
+  border: 2px solid $newGame;
+  font-size: 1.3em;
+  height: 5rem;
+  line-height: 0px;
+  font-weight: 700;
+  transition: 1s;
+  padding: 2rem;
+  &:hover {
+    background-color: $newGame;
+    color: #fff;
+    border-color: $rockColor;
+    animation-name: shake;
+    animation-duration: 1s;
+    animation-delay: 0.5s;
+    animation-iteration-count: infinite;
+  }
+}
+
+.main {
+  .btnScissors {
+    background-color: $scissorsColor;
+  }
+  .btnRock {
+    background-color: $rockColor;
+  }
+  .btnPaper {
+    background-color: $paperColor;
+  }
+}
+
+.playerPick {
+  .btnRock {
+    @extend .btnCommon;
+    background-color: $rockColor;
+    &:hover {
+      background-color: $rockHover;
+    }
+    span {
+      @extend .span;
+    }
+  }
+  .btnPaper {
+    @extend .btnCommon;
+    background-color: $paperColor;
+    &:hover {
+      background-color: $paperHover;
+    }
+    span {
+      @extend .span;
+    }
+  }
+  .btnScissors {
+    @extend .btnCommon;
+    background-color: $scissorsColor;
+    &:hover {
+      background-color: $scissorsHover;
+    }
+    span {
+      @extend .span;
+    }
+  }
+}
+
+.btn-default {
+  font-size: 4rem;
+}
+
+.name {
+  font-size: 1.5em;
+  font-weight: 900;
+}
+
+.count {
+  font-size: 1.1em;
+  font-weight: 700;
+  border-bottom: 10px solid $rockColor;
+  border-width: 3px;
+}
+
+.rock,
+.paper,
+.scissors {
+  color: #000;
+}
+
+@keyframes shake {
+  10%,
+  90% {
+    transform: translate3d(-1px, 0, 0);
+  }
+  20%,
+  80% {
+    transform: translate3d(2px, 0, 0);
+  }
+  30%,
+  50%,
+  70% {
+    transform: translate3d(-4px, 0, 0);
+  }
+  40%,
+  60% {
+    transform: translate3d(4px, 0, 0);
+  }
+}
+
+@media only screen and (max-width: 1366px) {}
+
+@media only scr3een and (max-width: 992px) {}
+
+@media only screen and (max-width: 768px) {}
+
+@media only screen and (max-width: 480px) {
+  .photo img {
+    display: none;
+  }
+}

@@ -1,0 +1,28 @@
+{
+  "name": "k-p-n",
+  "version": "1.0.0",
+  "description": "kamien",
+  "main": "index.html",
+  "dependencies": {
+    "gulp-install": "^1.1.0"
+  },
+  "devDependencies": {
+    "gulp-sass": "^3.1.0"
+  },
+  "scripts": {
+    "test": "kpn"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mrroch/Rock_scissors_paper-Game-INPROGRESS.git"
+  },
+  "keywords": [
+    "kpn"
+  ],
+  "author": "Michal Roch",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mrroch/Rock_scissors_paper-Game-INPROGRESS/issues"
+  },
+  "homepage": "https://github.com/mrroch/Rock_scissors_paper-Game-INPROGRESS#readme"
+}

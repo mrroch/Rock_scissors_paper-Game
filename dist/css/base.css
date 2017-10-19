@@ -1,0 +1,117 @@
+@import url("https://fonts.googleapis.com/css?family=Overlock:400,700,900&subset=latin-ext");
+.btnCommon, .playerPick .btnRock, .playerPick .btnPaper, .playerPick .btnScissors {
+  border: 2px solid #747472;
+  margin: 5px;
+  padding: 1rem 2rem;
+  transition: 0.8s; }
+
+.span, .playerPick .btnRock span, .playerPick .btnPaper span, .playerPick .btnScissors span {
+  font-size: 1.8em;
+  color: #747472; }
+
+body {
+  font-size: 10px; }
+
+.wrapper {
+  border: 6px solid #747472;
+  height: 100vh;
+  width: 100vw;
+  font-family: 'Overlock', cursive;
+  background-color: #F4E9D7;
+  position: relative; }
+
+.main h3 {
+  font-size: 3rem;
+  font-weight: 700;
+  letter-spacing: 0.2rem; }
+
+.text-center {
+  line-height: 60px;
+  padding-top: 15px; }
+
+.photo img {
+  margin: 0 auto;
+  position: absolute;
+  left: 37.5%;
+  top: 60%; }
+
+.table {
+  font-size: 1.3em; }
+
+.newGame button {
+  border: 2px solid #EDC5BB;
+  font-size: 1.3em;
+  height: 5rem;
+  line-height: 0px;
+  font-weight: 700;
+  transition: 1s;
+  padding: 2rem; }
+  .newGame button:hover {
+    background-color: #EDC5BB;
+    color: #fff;
+    border-color: #C7C3BA;
+    animation-name: shake;
+    animation-duration: 1s;
+    animation-delay: 0.5s;
+    animation-iteration-count: infinite; }
+
+.main .btnScissors {
+  background-color: #EDC5BB; }
+
+.main .btnRock {
+  background-color: #C7C3BA; }
+
+.main .btnPaper {
+  background-color: #C1DFDE; }
+
+.playerPick .btnRock {
+  background-color: #C7C3BA; }
+  .playerPick .btnRock:hover {
+    background-color: #9F9C94; }
+
+.playerPick .btnPaper {
+  background-color: #C1DFDE; }
+  .playerPick .btnPaper:hover {
+    background-color: #8ec5c3; }
+
+.playerPick .btnScissors {
+  background-color: #EDC5BB; }
+  .playerPick .btnScissors:hover {
+    background-color: #E8B4A7; }
+
+.btn-default {
+  font-size: 4rem; }
+
+.name {
+  font-size: 1.5em;
+  font-weight: 900; }
+
+.count {
+  font-size: 1.1em;
+  font-weight: 700;
+  border-bottom: 10px solid #C7C3BA;
+  border-width: 3px; }
+
+.rock,
+.paper,
+.scissors {
+  color: #000; }
+
+@keyframes shake {
+  10%,
+  90% {
+    transform: translate3d(-1px, 0, 0); }
+  20%,
+  80% {
+    transform: translate3d(2px, 0, 0); }
+  30%,
+  50%,
+  70% {
+    transform: translate3d(-4px, 0, 0); }
+  40%,
+  60% {
+    transform: translate3d(4px, 0, 0); } }
+
+@media only screen and (max-width: 480px) {
+  .photo img {
+    display: none; } }
